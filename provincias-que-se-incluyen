@@ -1,0 +1,24 @@
+/**
+*Con el siguiente código podrás hacer una lista de las provincias con las que quieres trabajar en Woocommerce. 
+*El resto de provincias no indicadas desaparecerán.
+*/
+
+add_filter('woocommerce_states', 'lista_provincias');
+
+function lista_provincias( $provincias ) {
+
+$provincias ['ES'] = array(
+
+'B' => 'Barcelona',
+
+'M' => 'Madrid',
+
+'MU' => 'Murcia'
+
+); //CODIGO Y NOMBRES DE PROVINCIAS DISPONIBLES
+
+return $provincias;
+
+}
+
+ 
