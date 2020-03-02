@@ -1,0 +1,19 @@
+/**
+*Eliminar muchas provincias de un golpe podéis utilizar este otro código que es más corto:
+*/
+
+add_filter('woocommerce_states', 'eliminar_provincias');
+
+function eliminar_provincias( $provincias ) {
+
+$exclude = array('TF','GC','CE','ML');
+
+foreach( $exclude as $item ) {
+
+unset($provincias['ES'][$item]);
+
+}
+
+return $provincias;
+
+}
