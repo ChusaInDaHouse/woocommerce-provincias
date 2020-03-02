@@ -1,0 +1,20 @@
+
+/** 
+* El código a añadir para eliminar las provincias de Ceuta, Melilla, Santa Cruz de Tenerife y Las Palmas sería
+*/
+
+add_filter('woocommerce_states', 'eliminar_provincias');
+
+function eliminar_provincias( $provincias ) {
+
+unset($provincias['ES']['TF']);
+
+unset($provincias['ES']['GC']);
+
+unset($provincias['ES']['CE']);
+
+unset($provincias['ES']['ML']);
+
+return $provincias;
+
+}
